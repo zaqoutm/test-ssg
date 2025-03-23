@@ -6,7 +6,6 @@ import Image from "next/image";
 
 // params slugs
 // versions of this page will be statically generated
-
 export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.id,
@@ -23,7 +22,7 @@ export default async function Page({
 
   return (
     <div>
-      <h1>Article id: {slug}</h1>
+      <h3>slug: {slug}</h3>
       <div className="article-view">
         <h1>{article.title}</h1>
         <p>{article.content}</p>
